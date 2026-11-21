@@ -1,0 +1,9 @@
+<svg width="160" height="60" viewBox="0 0 160 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M160 30C160 30 124.183 60 80 60C35.8172 60 0 30 0 30C0 30 35.8172 0 80 0C124.183 0 160 30 160 30Z" fill="#142630"/>
+<mask id="stroke0_14_89" fill="white">
+<path d="M160 30C160 30 124.183 60 80 60C35.8172 60 0 30 0 30C0 30 35.8172 0 80 0C124.183 0 160 30 160 30Z"/>
+</mask>
+<path d="M160 30C160 30 124.183 60 80 60C35.8172 60 0 30 0 30C0 30 35.8172 0 80 0C124.183 0 160 30 160 30Z" stroke-width="4" stroke="#17617D" mask="url(#stroke0_14_89)"/>
+<circle cx="80" cy="30" r="22" fill="#203B49"/>
+<circle cx="80" cy="30" r="7" fill="#526B7A"/>
+</svg>

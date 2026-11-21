@@ -1,26 +1,86 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* === Core Surfaces (Obsidian & Deep Synth Slate) === */
+  --bg-void: #070b1b;           /* Primary background void */
+  --bg-chassis: #0c1424;        /* Card container base */
+  --bg-surface: #142630;        /* Elevated panels, textareas & inactive states */
+  --bg-surface-hover: #1a323f;  /* Interactive hover surface */
+
+  /* === White Vision Chassis & Typography === */
+  --text-spectral: #f0f7fa;     /* Crisp White Vision primary text */
+  --text-slate: #8ca8b8;        /* Secondary labels & telemetry readouts */
+  --text-muted: #4b6574;        /* Inactive/placeholder text */
+
+  /* === Synthezoid Structural Borders === */
+  --border-dormant: #1c313d;    /* Inactive card/element framing */
+  --border-structural: #17617d; /* Active circuit lines & focused borders */
+  --border-glow: #79ddf4;       /* High-energy active highlight */
+
+  /* === Mind Stone / Solar Gem Accents === */
+  --accent-core: #79ddf4;       /* Primary active cyan (diamonds & active eyes) */
+  --accent-mid: #168ead;        /* Secondary beam / button fill */
+  --accent-deep: #17617d;       /* Recessed bevel / subtle badge fill */
+
+  /* === Semantic Telemetry States === */
+  --status-danger: #f43f5e;     /* Clear All / destructive actions */
+  --status-danger-bg: rgba(244, 63, 94, 0.12);
+
+  /* === Ambient Glow Shadows === */
+  --glow-sm: 0 0 10px rgba(121, 221, 244, 0.25);
+  --glow-md: 0 0 20px rgba(121, 221, 244, 0.35), 0 0 40px rgba(22, 142, 173, 0.15);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-void: var(--bg-void);
+  --color-chassis: var(--bg-chassis);
+  --color-surface: var(--bg-surface);
+  --color-surface-hover: var(--bg-surface-hover);
+
+  --color-spectral: var(--text-spectral);
+  --color-slate-hud: var(--text-slate);
+  --color-muted-hud: var(--text-muted);
+
+  --color-border-dormant: var(--border-dormant);
+  --color-border-structural: var(--border-structural);
+  --color-border-glow: var(--border-glow);
+
+  --color-cyan-core: var(--accent-core);
+  --color-cyan-mid: var(--accent-mid);
+  --color-cyan-deep: var(--accent-deep);
+
+  --color-danger: var(--status-danger);
+  --color-danger-bg: var(--status-danger-bg);
+
+  --shadow-mind-sm: var(--glow-sm);
+  --shadow-mind-md: var(--glow-md);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/* === Base Document Reset & HUD Scrollbar === */
+html,
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--bg-void);
+  color: var(--text-spectral);
+  color-scheme: dark;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Subtle dark slate scrollbar for Morse & Text areas */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-chassis);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-structural);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-core);
 }
